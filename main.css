@@ -1,0 +1,322 @@
+/* === General Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background: url('https://wallpaperaccess.com/full/5651990.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: antiquewhite;
+}
+
+/* === Header === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideUp 0.8s ease forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+
+.navbar a:hover {
+  color: aqua;
+}
+
+/* === Home Section === */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 70px 10% 0;
+  min-height: 100vh;
+}
+
+.home-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home-content * {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.8s ease forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+
+.home-content h1 {
+  font-size: 64px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.home-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.home-content h3 span.text {
+  font-size: 32px;
+  font-weight: 700;
+  color: #00ffe5;
+  text-shadow: 1px 1px 2px #004e4e;
+}
+
+.home-content p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 10px 25px;
+  background: aqua;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.btn-box:hover {
+  background-color: white;
+  color: black;
+}
+
+/* === Social Icons === */
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.home-sci a:hover {
+  background-color: aqua;
+  color: black;
+  transform: scale(1.1);
+  border-color: aqua;
+  box-shadow: 0 0 15px aqua, 0 0 30px aqua;
+}
+
+/* === Profile Image Positioning & Glow === */
+.profile-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin-left: 120px;
+}
+
+.big-glow-image img {
+  width: 75vh;
+  height: 75vh;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: #000;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
+  animation: glow 2.5s infinite alternate;
+}
+
+/* === Glow Animation === */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4), 0 0 45px rgba(255, 0, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 55px rgba(0, 255, 255, 0.6), 0 0 90px rgba(255, 0, 255, 0.5);
+  }
+}
+
+/* === About Section === */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 80px 10%;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-glow-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
+  animation: glow 2s infinite alternate;
+}
+
+.about-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.about-content h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #00ffe5;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* === Skills Section === */
+.skills {
+  padding: 80px 10%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transition: all 0.6s ease;
+  opacity: 1;
+  max-height: 2000px;
+  overflow: hidden;
+}
+
+.skills.hidden {
+  opacity: 0;
+  max-height: 0;
+  padding: 0 10%;
+  pointer-events: none;
+}
+
+.sub-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00ffe5;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.skill-box h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #00ffe5;
+}
+
+.skill-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* === Contact Section === */
+.contact {
+  padding: 60px 10%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+}
+
+.contact-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 2px solid #00ffe5;
+  color: #00ffe5;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-links a i {
+  font-size: 20px;
+}
+
+.contact-links a:hover {
+  background: #00ffe5;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffe5;
+}
+/* Fix scroll overlap due to fixed header */
+#contact {
+  scroll-margin-top: 100px;
+}
+
+
+/* === Slide Up Animation === */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

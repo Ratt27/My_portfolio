@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome To My Portfolio</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <nav class="navbar">
+      <a href="#" class="active" style="--i:1">Home</a>
+      <a href="#about" style="--i:2">About</a>
+      <a href="javascript:void(0);" onclick="showSkills()" style="--i:3">Skill</a>
+      <a href="#contact" style="--i:5">Contact</a> <!-- ✅ Fixed -->
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home">
+    <div class="home-content">
+      <h3 style="--i:1">Hello, It's Me</h3>
+      <h1 style="--i:2">Rattriz Ghosh</h1>
+      <h3 style="--i:3">And I'm a <span class="text"></span></h3> <!-- ✅ Typed.js visible -->
+      <p style="--i:4">
+        Passionate Computer Science undergraduate skilled in Java, SQL, and web development.<br>
+        I love building interactive projects and solving real-world problems through clean, efficient code.
+      </p>
+      <div class="home-sci">
+        <a href="https://www.instagram.com/rattriz/" style="--i:6"><i class='bx bxl-instagram'></i></a>
+        <a href="https://wa.me/917439312081" style="--i:7"><i class='bx bxl-whatsapp'></i></a> <!-- ✅ Fixed -->
+        <a href="https://github.com/Ratt27" style="--i:8"><i class='bx bxl-github'></i></a>
+      </div>
+      <a href="#" class="btn-box" style="--i:9">More About Me</a>
+    </div>
+
+    <!-- Big glowing image for home -->
+    <div class="profile-side big-glow-image">
+      <img src="mypic2.jpg" alt="My Photo" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-img small-glow-image">
+        <img src="mypic.jpg" alt="About Image" />
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          I’m a passionate and goal-driven Computer Science Engineering student with a strong command over Java, backed by solid hands-on experience in SQL and JavaScript. I enjoy building logic-driven applications and have worked on projects like quiz platforms and interactive games. With a problem-solving mindset and a constant desire to learn, I’m aiming to build a career in software development where I can apply my skills, contribute meaningfully, and grow with evolving technologies. Whether it's backend logic or frontend interactivity, I love transforming ideas into functional code.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section (initially hidden) -->
+  <section class="skills hidden" id="skills">
+    <div class="container">
+      <h1 class="sub-title">My <span>Skills</span></h1>
+      <div class="skills-list">
+        <div class="skill-box">
+          <h2>💻 Programming Languages</h2>
+          <p>Java (Core & OOP), SQL, JavaScript, C</p>
+        </div>
+        <div class="skill-box">
+          <h2>🌐 Web Development</h2>
+          <p>HTML5, CSS3, JavaScript (ES6), DOM Manipulation</p>
+        </div>
+        <div class="skill-box">
+          <h2>🧠 Data Structures & Algorithms</h2>
+          <p>Arrays, Strings, Linked Lists, Stacks, Queues, Trees, Graphs, Sorting & Searching</p>
+        </div>
+        <div class="skill-box">
+          <h2>🗃️ Database & Querying</h2>
+          <p>MySQL, Oracle, Query Optimization, Joins, Grouping, Stored Procedures</p>
+        </div>
+        <div class="skill-box">
+          <h2>⚙️ Tools & Technologies</h2>
+          <p>Git & GitHub, VS Code, MySQL Workbench</p>
+        </div>
+        <div class="skill-box">
+          <h2>🧪 Concepts</h2>
+          <p>Object-Oriented Programming (OOP), DBMS, DSA</p>
+        </div>
+        <div class="skill-box">
+          <h2>🔧 Soft Skills</h2>
+          <p>Problem Solving, Logical Thinking, Team Collaboration, Communication, Time Management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <h2 class="sub-title">Contact <span>Me</span></h2>
+      <p>If you'd like to connect or work with me, feel free to reach out through any of the platforms below.</p>
+      <p><strong>📍 Location:</strong> Kolkata, India</p>
+      <div class="contact-links">
+        <a href="https://wa.me/917439312081" target="_blank"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+        <a href="https://www.instagram.com/rattriz/" target="_blank"><i class='bx bxl-instagram'></i> Instagram</a>
+        <a href="https://github.com/Ratt27" target="_blank"><i class='bx bxl-github'></i> GitHub</a>
+        <a href="mailto:rattrizghosh@gmail.com" target="_blank"><i class='bx bx-envelope'></i> Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
